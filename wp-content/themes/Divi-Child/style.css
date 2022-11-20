@@ -1,0 +1,236 @@
+/*
+Theme Name: Divi Child
+Text Domain: divi-child
+Version: 1.0
+Template: divi
+Author: Richard Agama
+Author URI: http://localhost/project/
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+@font-face {
+    font-family: 'Raleway'; /*a name to be used later*/
+    src: url('./fonts/Raleway-Regular.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Raleway-Bold'; /*a name to be used later*/
+    src: url('./fonts/Raleway-Bold.ttf'); /*URL to font*/
+}
+
+.cta-home-button{
+    background: #47AEE1;
+    color: white;
+    font-family: 'Raleway-Bold';
+    border-radius: 20px;
+    font-size: 14px;
+    padding-left: 32px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 32px;
+}
+.cta-home-h1{
+    font-family: 'Raleway';
+
+}
+.cta-home-p{
+    font-family: 'Raleway';
+    color: #262222;
+
+}
+
+#et_top_search{
+    display: none;
+}
+
+#et-top-navigation > *{
+    font-family: 'Raleway';
+
+}
+
+.et_pb_svg_logo #logo{
+    height: 33%;
+}
+
+#top-menu li.current-menu-item>a {
+    color: #495254;
+}
+
+.h1-build{
+    font-family: 'Raleway-Bold';
+    color: #47AEE1;
+}
+
+#top-menu li{
+    padding-right: 66px;
+}
+
+#main-header{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.cta-menu-button a{
+    font-family: 'Raleway-Bold';
+    background: #47AEE1;
+    font-size: 12px;
+    width: 140px;
+    height: 38px;
+    color: white !important;
+    border-radius: 19px;
+    text-align: center;
+    padding-right: 10px;
+        line-height: 37px;
+
+}
+
+.cta-menu-button a::before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 12px 0px 0px 24px;
+        background: url("http://localhost/project/wp-content/uploads/2022/11/Vector-3.svg") no-repeat;
+}
+
+.cta-home-button:hover{
+    color: black;
+}
+
+/* 980 */
+@media only screen and (max-width: 980px){
+    .cta-menu-button a{
+        width: auto;
+        height: auto;
+    }
+
+    .cta-menu-button a:hover{
+        color:black !important;
+    }
+
+
+}
+
+/* 470px */
+@media only screen and (max-width: 470px){
+    .cta-menu-button a{
+        width: auto;
+        height: auto;
+    }
+
+    .cta-menu-button a:hover{
+        color:black !important;
+    }
+
+    .et_pb_text_0 h1{
+        font-size: 24px !important;
+
+    }
+
+}
+
+/* Type Animation */
+
+
+@keyframes letters {
+    from {
+      left: 0;
+    }
+    to {
+      left: 50ch;
+    }
+  }
+  
+  @keyframes lines {
+    from {
+      top: 0;
+    }
+    to {
+      top: 100%;
+    }
+  }
+  
+  @keyframes cursor-type {
+    50% {
+      border-color: #000;
+    }
+  }
+  
+  @keyframes cursor-wait {
+    0% {
+      box-shadow: inset 2px 0 0 0 rgba(0, 0, 0, 0);
+    }
+    1% {
+      box-shadow: inset 2px 0 0 0 rgba(0, 0, 0, 1);
+    }
+    40% {
+      box-shadow: inset 2px 0 0 0 rgba(0, 0, 0, 1);
+    }
+  }
+  
+  .type {
+    position: relative;
+    font-family: Basis Grotesque Pro Regular, Arial, sans-serif;
+    width: auto;
+    line-height: 1.2;
+    word-break: break-all;
+    overflow: hidden;
+    font-size: 14px;
+    background: transparent;
+  }
+  
+  @supports (width: 1ch) {
+    .type:before,
+    .type:after {
+      box-sizing: border-box;
+      content: " ";
+      position: absolute;
+      z-index: 1;
+      display: block;
+      height: 1.2em;
+      width: 100%;
+      background-color: #fff;
+    }
+    .type:before {
+      border-left: 2px solid transparent;
+      top: 100%;
+      animation-name: letters, lines, cursor-type, cursor-wait;
+      animation-fill-mode: both, both, both, backwards;
+    }
+    .type:after {
+      content: " ";
+      height: 100%;
+      top: 100%;
+      left: 0;
+      margin-top: 1.2em;
+    }
+  }
+  
+  .type:before {
+    animation-duration: 1.4285714286s, 1.4285714286s, 0.0285714286s, 0.8s;
+    animation-timing-function: steps(50, end), steps(1, end), step-end, ease-out;
+    animation-iteration-count: 1, 1, 35, 2;
+    animation-delay: 0.2s, 0.2s, 0.2s, 0.2s;
+  }
+  
+  .type:after {
+    animation: lines 0.8s steps(1, end) 1;
+    animation-fill-mode: both;
+    animation-delay: 0s;
+  }
+  
+  .type + .type:before {
+    animation-duration: 1.4285714286s, 1.4285714286s, 0.0285714286s, 0.8s;
+    animation-timing-function: steps(50, end), steps(1, end), step-end, ease-out;
+    animation-iteration-count: 1, 1, 35, 2;
+    animation-delay: 0s, 0s, 0s, 0s;
+  }
+  
+  .type + .type:after {
+    animation: lines 0.8s steps(1, end) 1;
+    animation-fill-mode: both;
+    animation-delay: 0s;
+  }
+  
